@@ -1,0 +1,373 @@
+
+
+/* Your regular CSS */
+
+
+
+
+.container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb {
+    color: #777;
+    margin: 0;
+}
+
+/* Your regular CSS */
+
+.createBtn {
+    display: inline-block;
+    font-weight: bold;
+    padding: 1.5rem;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 5px;
+    /* Adjust as needed */
+}
+
+.createBtn div {
+    display: flex;
+    align-items: center;
+}
+
+.createBtn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+/* Add your existing styles above this line */
+
+
+.bigContainer {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 99%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-right:20px;
+    /* Allow big-container to take up available vertical space */
+    border-radius: 5px;
+}
+
+.headDiv1,
+.headDiv2,
+.belowDiv {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+
+/* Add this style to position the dropdown at the end of head-div1 */
+
+.headDiv1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+    flex: 2;
+    margin-right: 20px;
+}
+
+@media (max-width: 200px) {
+    .headDiv1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dropdown {
+        margin-top: 1rem;
+        /* Adjust as needed */
+    }
+}
+
+.headDiv2 {
+    width: 30%;
+    height: 70px;
+    flex: 1;
+}
+
+.headDiv2 input[type="text"] {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding: 10px;
+}
+
+.belowDiv {
+    width: 100%;
+    min-height: 100vh;
+    /* Ensure below-div takes up the rest of the screen height */
+}
+@media (max-width: 800px) {
+    .belowDiv{
+        width: 100%
+    }
+}
+
+
+@media (max-width: 800px) {
+    .headDiv1 {
+        width: 70%;
+    }
+    .headDiv2 {
+        width: 30%;
+    }
+}
+
+
+/* Style for buttons and dropdowns */
+
+.selectAllBtn,
+.copyBtn,
+.deleteBtn,
+.dropbtn1,
+.dropbtn2 {
+    display: inline-block;
+    font-weight: bold;
+    padding: 1rem;
+    text-decoration: none;
+    margin-right: 10px;
+    border: none;
+}
+
+
+/* Dropdown Button */
+
+.dropbtn {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width:100%;
+}
+
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdownContent{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdownContent a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+
+/* Style for button backgrounds */
+
+#copyButton {
+    background-image: url('copy.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#deleteButton {
+    background-image: url('delete.svg');
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Add your existing styles above this line */
+
+
+/* Add your existing styles above this line */
+
+.qrCodeContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width:100%;
+}
+
+.qrCode {
+    width: 150px;
+    height: 150px;
+}
+
+.qrCodeInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.qrCodeInfo p {
+    margin: 0;
+    /* Remove default margin for <p> */
+}
+
+
+/* Updated button styles */
+
+.buttonsContainer button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttonsContainer button:hover {
+    background-color: #0056b3;
+}
+@media screen and (max-width: 2400px) {
+    .buttonsContainer {
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .buttonsContainer {
+        margin-left: 8px;
+        margin-right:2px
+    }
+}
+
+
+/* Add your existing styles above this line */
+
+.textColumns {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+
+
+.qrCode {
+    max-width: 20%;
+    /* Make the QR code image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    /* Ensure the image takes up 100% of its container's width */
+}
+
+.qrCodeInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.qrCodeInfo {
+    margin: 0;
+    font-size: 16px;
+    /* Set a base font size */
+}
+
+@media screen (max-width: 800px) {
+    .qrCodeInfo {
+        margin-left: 0;
+        /* Adjust as needed */
+    }
+    .qrCodeInfo p {
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 200px) {
+    .qrCodeInfo p {
+        font-size: 12px;
+        /* Further adjust font size for even smaller screens */
+    }
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Add this style to show the dropdown content */
+.dropdownContent.show {
+    display: block;
+}
+
+
