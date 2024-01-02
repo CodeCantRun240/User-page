@@ -5,4 +5,3 @@ Vite + React + tailwind
 
 1) npm i
 2) npm run dev
-# User-page

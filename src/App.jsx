@@ -77,7 +77,7 @@ const App = () => {
         <div className="flex gap-x-4 items-center">
           {/* Logo3.png */}
           <img
-            src="./src/assets/logo3.png"
+            src="./public/logo3.png"
             alt="Logo3"
             className={`cursor-pointer duration-500 
                 h-11 w-11" 
@@ -98,7 +98,7 @@ const App = () => {
               } `}
               onClick={() => setSelectedMenuItem(index)}
             >
-              <img src={`./src/assets/${Menu.src}.png`} alt={Menu.title} />
+              <img src={`./public/${Menu.src}.png`} alt={Menu.title} />
               <span className={"origin-left duration-200"}>{Menu.title}</span>
             </li>
           ))}
@@ -109,19 +109,19 @@ const App = () => {
           <div className="flex justify-between items-center h-full">
             {/* Logo on the left */}
             <img
-              src="/src/assets/burger.png"
+              src="./public/burger.png"
               alt="Left Logo"
               className="h-4/5	"
               onClick={toggleNavbar}
             />
             {/* Middle logo */}
-            <img src="src/assets/qreact.png" alt="Middle Logo" className="h-full" />
+            <img src="./public/qreact.png" alt="Middle Logo" className="h-full" />
             {/* Button on the right */}
             {/* Button with logo */}
             <button className="bg-blue-500 text-white px-4 py-2  flex items-center mr-2 rounded-xl">
               {/* Logo inside the button */}
               <img
-                src="/src/assets/User.png"
+                src="./public/User.png"
                 alt="Button Logo"
                 className="h-6 mr-2"
               />
@@ -143,7 +143,7 @@ const App = () => {
         <div className="flex gap-x-4 items-center">
           {/* Logo3.png */}
           <img
-            src="./src/assets/cross.png"
+            src="./public/cross.png"
             alt="Logo3"
             className={`cursor-pointer duration-500 
                 h-11 w-11" 
@@ -164,7 +164,7 @@ const App = () => {
               } `}
               onClick={() => setSelectedMenuItem(index)}
             >
-              <img src={`./src/assets/${Menu.src}.png`} alt={Menu.title} />
+              <img src={`./public/${Menu.src}.png`} alt={Menu.title} />
               <span className={"origin-left duration-200"}>{Menu.title}</span>
             </li>
           ))}

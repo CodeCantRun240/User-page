@@ -11,14 +11,7 @@
     display:block;
     font-family: 'Poppings', sans-serif;
 }
-body{
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: row;
-    gap: 30px;
-    
-}
+
 
 .inputBox{
     position: relative;
@@ -98,7 +91,7 @@ body{
     border-radius: 5px;
 }
 
-button[type="button"] {
+.inputBox button[type="button"] {
     margin-left: 0px;
     width: 100px;
     height: 40px;
@@ -111,7 +104,7 @@ button[type="button"] {
     border-radius: 5px; 
 }
 
-button[type="button"]:hover {
+.inputBox button[type="button"]:hover {
     background-color: blue; /* Change background color on hover */
 }
 

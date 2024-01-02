@@ -79,7 +79,7 @@ function MyQRCodesContent() {
             data-action="click->admin--qr-filters#createNewBtn"
           >
             <div>
-              <img src="src/assets/more.png" alt="add" />
+              <img src="/public/more.png" alt="add" />
               <span>Create new QR</span>
             </div>
           </a>
@@ -97,7 +97,7 @@ function MyQRCodesContent() {
               className={MyQR.dropbtn}
             >
               <img
-                src="src/assets/filter.png"
+                src="/public/filter.png"
                 alt="from"
                 style={{ width: "24px", height: "24px" }}
               />
@@ -126,7 +126,7 @@ function MyQRCodesContent() {
               className={MyQR.dropbtn}
             >
               <img
-                src="src/assets/from.png"
+                src="/public/from.png"
                 alt="from"
                 style={{ width: "24px", height: "24px" }}
               />
@@ -154,12 +154,19 @@ function MyQRCodesContent() {
         </div>
         <div className={MyQR.belowDiv}>
           <div className={MyQR.qrCodeContainer}>
-            <img src="download.png" alt="QR Code" className={MyQR.qrCode} />
+            <div className={MyQR.checkboxContainer}>
+              {/* Checkbox */}
+              <input type="checkbox" id={MyQR.checkbox} />
+              {/* Text next to the checkbox */}
+              <label htmlFor={MyQR.checkbox} className={MyQR.checkboxLabel}>
+                Include in Selection
+              </label>
+            </div>
+            <img src="./public/download.png" alt="QR Code" className={MyQR.qrCode} />
             <div className={MyQR.qrCodeInfo}>
               <p>Link: https://me-qr.com/entry/vcard/N6Oj8nMX</p>
               <p>Type: vCard</p>
               <p>Created: 11.12.23</p>
-              <p>Folder: N60j8nMX</p>
             </div>
             <div className={MyQR.textColumns}>
               <p>Scans:</p>
@@ -187,7 +194,7 @@ function MyQRCodesContent() {
                   >
                     PNG
                     <img
-                      src="src/assets/qrdowload.png"
+                      src="/public/qrdowload.png"
                       alt="Download SVG"
                       style={{
                         width: "24px",
@@ -203,7 +210,7 @@ function MyQRCodesContent() {
                   >
                     SVG
                     <img
-                      src="src/assets/qrdowload.png"
+                      src="/public/qrdowload.png"
                       alt="Download SVG"
                       style={{
                         width: "24px",

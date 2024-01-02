@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import MyProfile from './MyProfile.module.css';
 import './Error.css';
@@ -34,7 +35,7 @@ function MyProfileContent() {
         });
     };
 
-    const validateForm = () => {
+    const validateGeneral = () => {
         let valid = true;
         const newErrors = {
             firstName: "",
@@ -42,43 +43,24 @@ function MyProfileContent() {
             email: "",
             phoneNumber: "",
             dob: "",
-            oldPassword: "",
-            newPassword: "",
-            confirmPassword: "",
+            
         };
 
     
 
-        // Validate old password
-        if (formData.oldPassword.trim() === "") {
-            newErrors.oldPassword = "Old password is required";
-            valid = false;
-        }
+        
 
-        // Validate new password
-        if (formData.newPassword.trim() === "") {
-            newErrors.newPassword = "New password is required";
-            valid = false;
-        }
-
-        // Validate confirm password
-        if (formData.confirmPassword.trim() === "") {
-            newErrors.confirmPassword = "Confirm password is required";
-            valid = false;
-        } else if (formData.newPassword !== formData.confirmPassword) {
-            newErrors.confirmPassword = "Passwords do not match";
-            valid = false;
-        }
+        
 
         // Validate first name
         if (formData.firstName.trim() === "") {
-            newErrors.firstName = "First name is required";
+            newErrors.firstName = "First name is invalid";
             valid = false;
         }
 
         // Validate last name
         if (formData.lastName.trim() === "") {
-            newErrors.lastName = "Last name is required";
+            newErrors.lastName = "Last name is invalid";
             valid = false;
         }
 
@@ -109,6 +91,36 @@ function MyProfileContent() {
             console.log("Form is invalid. Please correct errors.");
         }
     };
+
+    const validatePassword = () => {
+        let valid = true;
+        const newErrors = {
+            
+            oldPassword: "",
+            newPassword: "",
+            confirmPassword: "",
+        };
+        // Validate old password
+        if (formData.oldPassword.trim() === "") {
+            newErrors.oldPassword = "Old password is required";
+            valid = false;
+        }
+
+        // Validate new password
+        if (formData.newPassword.trim() === "") {
+            newErrors.newPassword = "New password is required";
+            valid = false;
+        }
+
+        setErrors(newErrors);
+
+        if (valid) {
+            // Your save logic for password here
+            console.log("Password is valid. Saving...");
+        } else {
+            console.log("Password is invalid. Please correct errors.");
+        }
+    }
 
 
  
@@ -156,7 +168,7 @@ function MyProfileContent() {
                 </div>
                 
                 <div className={MyProfile.inputBox}>
-                <button type="button" onClick={validateForm}>Save</button>
+                <button type="button" onClick={validateGeneral}>Save</button>
                 </div>
          </div>
             
@@ -180,7 +192,7 @@ function MyProfileContent() {
         </div>
         
         <div className={MyProfile.inputBox}>
-                <button type="button" onClick={validateForm}>Save</button>
+                <button type="button" onClick={validatePassword}>Save</button>
                 </div>
         </div>
         </div>
